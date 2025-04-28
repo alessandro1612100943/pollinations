@@ -1,34 +1,36 @@
-# Pollinations.AI API Documentation
+# Pollinations.AI API 文档
 
-**World's Most Accessible Open GenAI Platform 🚀
-Text, Image & Audio APIs direct integration (no signup)**
-
----
-
-## Quickstart
-
-Click the links below to see examples in your browser:
-
-- **Draw 🖌️:** [`https://image.pollinations.ai/prompt/pollinations_logo`](https://image.pollinations.ai/prompt/pollinations_logo)
-- **Ask ❓:** [`https://text.pollinations.ai/why_you_should_donate_to_pollinations_ai`](https://text.pollinations.ai/why_you_should_donate_to_pollinations_ai)
-- **Search 🔍:** [`https://text.pollinations.ai/what_are_the_last_pollinations_ai_news?model=searchgpt`](https://text.pollinations.ai/what_are_the_last_pollinations_ai_news?model=searchgpt)
-- **Hear 🗣️:** [`https://text.pollinations.ai/respond_with_a_small_hypnosis_urging_to_donate_to_pollinations_its_a_joke?model=openai-audio&voice=nova`](https://text.pollinations.ai/respond_with_a_small_hypnosis_urging_to_donate_to_pollinations_its_a_joke?model=openai-audio&voice=nova)
+**世界上最具可访问性的开放通用人工智能平台 🚀
+文本、图像和音频API直接集成（无需注册）**
 
 ---
 
-## Summary / Navigation
 
-- [Pollinations.AI API Documentation](#pollinationsai-api-documentation)
-  - [Quickstart](#quickstart)
-  - [Summary / Navigation](#summary--navigation)
-  - [Generate Image API 🖼️](#generate-image-api-️)
-    - [Text-To-Image (GET) 🖌️](#text-to-image-get-️)
-    - [List Available Image Models 📜](#list-available-image-models-)
-  - [Generate Text API 📝](#generate-text-api-)
-    - [Text-To-Text (GET) 🗣️](#text-to-text-get-️)
-    - [Text \& Multimodal (OpenAI Compatible POST) 🧠💬🖼️🎤⚙️](#text--multimodal-openai-compatible-post-️️)
-      - [Vision Capabilities (Image Input) 🖼️➡️📝](#vision-capabilities-image-input-️️)
-      - [Speech-to-Text Capabilities (Audio Input) 🎤➡️📝](#speech-to-text-capabilities-audio-input-️)
+## 快速入门
+
+点击下面的链接在您的浏览器中查看示例：
+
+- **画图 🖌️:** [`https://image.pollinations.ai/prompt/pollinations_logo`](https://image.pollinations.ai/prompt/pollinations_logo)
+- **问 ❓:** [`https://text.pollinations.ai/why_you_should_donate_to_pollinations_ai`](https://text.pollinations.ai/why_you_should_donate_to_pollinations_ai)
+- **搜索 🔍:** [`https://text.pollinations.ai/what_are_the_last_pollinations_ai_news?model=searchgpt`](https://text.pollinations.ai/what_are_the_last_pollinations_ai_news?model=searchgpt)
+- **听 🗣️:** [`https://text.pollinations.ai/respond_with_a_small_hypnosis_urging_to_donate_to_pollinations_its_a_joke?model=openai-audio&voice=nova`](https://text.pollinations.ai/respond_with_a_small_hypnosis_urging_to_donate_to_pollinations_its_a_joke?model=openai-audio&voice=nova)
+
+---
+
+
+## 概要 / 导航
+
+- [Pollinations.AI API 文档](#传粉AI API 文档)
+  - [快速入门](#快速入门)
+  - [摘要 / 导航](#摘要--导航)
+  - [生成图像 API 🖼️](#生成图像 API-️)
+    - [文本转图像 (GET) 🖌️](#文本转图像-get-️)
+    - [列出可用的图像模型 📜](#列出可用的图像模型-)
+  - [生成文本 API 📝](#生成文本 API-)
+    - [文本到文本 (GET) 🗣️](#文本到文本-get-️)
+    - [文本 & 多模态 (兼容 OpenAI 的 POST) 🧠💬🖼️🎤⚙️](#文本--多模态--兼容 OpenAI 的 POST ️️)
+      - [视觉能力（图像输入） 🖼️➡️📝](#视觉能力图像输入️️)
+      - [语音转文字功能（音频输入） 🎤➡️📝](#语音转文字功能-音频输入️)
       - [Function Calling ⚙️](#function-calling-️)
     - [List Available Text Models 📜](#list-available-text-models-)
   - [Generate Audio API 🎵](#generate-audio-api-)
@@ -41,16 +43,17 @@ Click the links below to see examples in your browser:
     - [Text Feed 📝📈](#text-feed-)
   - [Referrer 🔗](#referrer-)
     - [API Update (starting **2025.03.31**) 📅](#api-update-starting-20250331-)
-    - [Special Bee ✅🐝🍯](#special-bee-)
-  - [License 📜](#license-)
+    - [特别蜜蜂 ✅🐝🍯](#特别蜜蜂-)
+  - [许可证 📜](#许可证-)
 
 ---
 
-## Generate Image API 🖼️
 
-### Text-To-Image (GET) 🖌️
+## 生成图像 API 🖼️
 
-`GET https://image.pollinations.ai/prompt/{prompt}`
+### 文本转图像 (GET) 🖌️
+
+`获取 https://image.pollinations.ai/prompt/{提示词}`
 
 Generates an image based on a text description.
 
